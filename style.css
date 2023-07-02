@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-light-color: #FFF;
+    --bg-dark-color: #121214;
+    
+    --bg-marked-color: hsla(194, 97%, 31%, 1);
+    --bg-unmarked-color: hsla(240, 9%, 89%, 1);
+    
+    --img-marked-color: #FFFFFF;
+    --img-unmarked-color: #323238;
+
+    --img-dark-color: #29292E;
+    --img-marked-dark-color: #0A3442;
+
+    --text-light-color: #323238;
+    --text-dark-color: #FFFFFF;
+    --btn-dark-color: #C4C4CC;
+
+    font-size:  62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 82.1rem;
+
+    gap: 19.2rem;
+
+}
+
+body.light {
+    background-color: var(--bg-light-color);
+}	
+
+body.dark {
+    background-color: var(--bg-dark-color);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.buttons button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 4.8rem);   
+}
+
+main {
+    display: grid;
+    position: relative;      
+}
+
+#timer, 
+#timer .set {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(4rem, 4rem + 10vw, 12.666rem);
+    font-weight: 500;
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+}
+
+#timer .set.light {
+    color: var(--text-light-color);
+}
+
+#timer .set.dark {
+    color: var(--text-dark-color);
+}
+
+#controls {
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+    border-radius: 999.9rem;
+
+    width: clamp(40rem, 30rem + 30vw, 31.2rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+#controls button svg.light path {
+    fill: var(--text-light-color);
+}
+
+#controls button svg.dark path {
+    fill: var(--btn-dark-color);
+}
+
+footer {
+    display: flex;  
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+
+    width: 30%;
+
+    gap: 3.2rem;
+}
+
+footer button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 13.8rem);   
+    height: clamp(3.2rem, 2rem + 12vw, 15.2rem);  
+    
+    color: var(--marked-color)
+}
+
+footer button svg.marked path#bg {
+    fill: var(--bg-marked-color);
+}
+
+footer button svg.marked path#img,
+footer button svg.marked rect#img,
+footer button svg.marked circle#img  {
+    fill: var(--img-marked-color);
+
+
+}
+
+footer button svg.dark path#bg {
+    fill: var(--img-dark-color);
+}
+footer button svg.marked.dark path#bg {
+    fill: var(--img-marked-dark-color);
+}
+
+footer button svg.dark path#img,
+footer button svg.dark rect#img,
+footer button svg.dark circle#img {
+    fill: var(--btn-dark-color);
+}
+
+.mode button svg {
+    position: absolute;
+    right: 6.4rem;
+    top: 6.4rem;
+}
